@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://dpcl2obyu44yu"]
+
+[ext_resource type="Script" uid="uid://doisg380bvkhl" path="res://Scripts/player.gd" id="1_8ffim"]
+[ext_resource type="Texture2D" uid="uid://7m1h0yo0bl8h" path="res://icon.svg" id="2_xfk5q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3emo"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ioce4"]
+size = Vector2(384, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smpkv"]
+size = Vector2(32, 64)
+
+[node name="Level1" type="Node2D" unique_id=1591896178]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=532764730]
+position = Vector2(574, 256)
+script = ExtResource("1_8ffim")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=477707378]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_xfk5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1207751264]
+shape = SubResource("RectangleShape2D_w3emo")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1385447679]
+position_smoothing_enabled = true
+
+[node name="Platform" type="StaticBody2D" parent="." unique_id=1845356816]
+position = Vector2(567, 376)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform" unique_id=2135991260]
+scale = Vector2(3, 0.12499999)
+texture = ExtResource("2_xfk5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" unique_id=1558665979]
+shape = SubResource("RectangleShape2D_ioce4")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=107039067]
+position = Vector2(987, 346)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform2" unique_id=1806489922]
+scale = Vector2(3, 0.12499999)
+texture = ExtResource("2_xfk5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=238725932]
+shape = SubResource("RectangleShape2D_ioce4")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=927948952]
+position = Vector2(1406, 379)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform3" unique_id=1452979002]
+scale = Vector2(3, 0.12499999)
+texture = ExtResource("2_xfk5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=2103718075]
+shape = SubResource("RectangleShape2D_ioce4")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=117446626]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1297145513]
+position = Vector2(4.7683716e-07, -32)
+scale = Vector2(0.25, 0.5)
+texture = ExtResource("2_xfk5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2045470005]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_smpkv")
